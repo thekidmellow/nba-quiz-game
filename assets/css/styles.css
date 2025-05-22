@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Colors */
+    --color-primary: #ff0000;
+    --color-correct: #00ff00;
+    --color-incorrect: #ff0000;
+    --color-dark: rgba(0, 0, 0, 0.7);
+
+    /* Styles */
+    --border-radius: 10px;
+    --container-width: 1200px;
+}

@@ -15,9 +15,9 @@
 
 <body>
 
-<!-- START SCREEN -->
+    <!-- START SCREEN -->
 
-<div class="container">
+    <div class="container">
         <div class="game-screen" id="start-screen">
             <h1>NBA QUIZ GAME</h1>
             <div class="input-container">
@@ -26,65 +26,66 @@
             </div>
         </div>
 
-<!-- Quiz screen -->
+        <!-- Quiz screen -->
 
-    <div class="game-screen hidden" id="quiz-screen">
-        <h1>NBA QUIZ GAME</h1>
-        <div class="score-display">Score : <span id="current-score">0</span>
+        <div class="game-screen hidden" id="quiz-screen">
+            <h1>NBA QUIZ GAME</h1>
+            <div class="score-display">Score : <span id="current-score">0</span>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Which team has won the most NBA championships?</h2>
+
+                <div class="options-grid">
+                    <div class="option" data-team="Boston Celtics">
+                        <img src="/assets/images/Boston.jpg" alt="Boston Celtics" loading="lazy">
+                        <span class="team-name">Boston Celtics</span>
+                    </div>
+
+                    <div class="option" data-team="Chicago Bulls">
+                        <img src="/assets/images/Bulls.jpg" alt="Chicago Bulls" loading="lazy">
+                        <span class="team-name">Chicago Bulls</span>
+                    </div>
+
+                    <div class="option" data-team="Los Angeles Lakers">
+                        <img src="/assets/images/L.A.jpg" alt="Los Angeles Lakers" loading="lazy">
+                        <span class="team-name">Los Angeles Lakers</span>
+                    </div>
+
+                    <div class="option" data-team="Golden State Warriors">
+                        <img src="../assets/images/Warriors.jpg" alt="Golden State Warriors" loading="lazy">
+                        <span class="team-name">Golden State Warriors</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="question-container">
-            <h2 id="question-text">Which team has won the most NBA championships?</h2>
+        <!-- Game Over Screen-->
 
-            <div class="options-grid">
-                <div class="option" data-team="Boston Celtics">
-                <img src="/assets/images/Boston.jpg" alt="Boston Celtics" loading="lazy">
-                <span class="team-name">Boston Celtics</span>
+        <div class="game-screen hidden" id="end-screen">
+            <h1>GAME OVER!</h1>
+            <img src="/assets/images/crying_face.png" alt="Game Over" class="result-image" loading="lazy">
+            <div class="final-score">
+                <p>Final Score : <span id="final-score">0</span></p>
+                <p>Username : <span id="final-username">Player</span></p>
             </div>
+            <button id="play-again" class="btn">PLAY AGAIN</button>
+        </div>
 
-            <div class="option" data-team="Chicago Bulls">
-            <img src="/assets/images/Bulls.jpg" alt="Chicago Bulls" loading="lazy">
-            <span class="team-name">Chicago Bulls</span>
+        <!-- Victory Screen-->
+
+        <div class="game-screen hidden" id="victory-screen">
+            <h1>SLAM DUNK!</h1>
+            <img src="/assets/images/correct_meme.png" alt="Victory" class="result-image" loading="lazy">
+            <div class="final-score">
+                <p>Final Score : <span id="victory-score">30</span></p>
+                <p>Username : <span id="victory-username">Player</span></p>
             </div>
-
-            <div class="option" data-team="Los Angeles Lakers">
-            <img src="/assets/images/L.A.jpg" alt="Los Angeles Lakers" loading="lazy">
-            <span class="team-name">Los Angeles Lakers</span>
-            </div>
-
-            <div class="option" data-team="Golden State Warriors">
-            <img src="../assets/images/Warriors.jpg" alt="Golden State Warriors" loading="lazy">
-            <span class="team-name">Golden State Warriors</span></div>
+            <button id="play-again-victory" class="btn">PLAY AGAIN</button>
         </div>
     </div>
-</div>
 
-<!-- Game Over Screen-->
-
-<div class="game-screen hidden" id="end-screen">
-    <h1>GAME OVER!</h1>
-    <img src="/assets/images/crying_face.png" alt="Game Over" class="result-image" loading="lazy">
-    <div class="final-score">
-        <p>Final Score : <span id="final-score">0</span></p>
-        <p>Username : <span id="final-username">Player</span></p>
-    </div>
-    <button id="play-again" class="btn">PLAY AGAIN</button>
-</div>
-
-<!-- Victory Screen-->
-
-<div class="game-screen hidden" id="victory-screen">
-    <h1>SLAM DUNK!</h1>
-    <img src="/assets/images/correct_meme.png" alt="Victory" class="result-image" loading="lazy">
-    <div class="final-score">
-        <p>Final Score : <span id="victory-score">30</span></p>
-        <p>Username : <span id="victory-username">Player</span></p>
-    </div>
-    <button id="play-again-victory" class="btn">PLAY AGAIN</button>
-</div>
-</div>
-
-<script src="/assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 
 
 </body>
