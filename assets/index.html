@@ -15,7 +15,7 @@
 
 <body>
 
-    <!-- START SCREEN -->
+<!-- START SCREEN -->
 
 <div class="container">
         <div class="game-screen" id="start-screen">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-    <!-- Quiz screen -->
+<!-- Quiz screen -->
 
     <div class="game-screen hidden" id="quiz-screen">
         <h1>NBA QUIZ GAME</h1>
@@ -57,6 +57,18 @@
             <span class="team-name">Golden State Warriors</span></div>
         </div>
     </div>
+</div>
+
+<!-- Game Over Screen-->
+
+<div class="game-screen hidden" id="end-screen">
+    <h1>GAME OVER!</h1>
+    <img src="/assets/images/crying_face.png" alt="Game Over" class="result-image" loading="lazy">
+    <div class="final-score">
+        <p>Final Score : <span id="final-score">0</span></p>
+        <p>Username : <span id="final-username">Player</span></p>
+    </div>
+    <button id="play-again" class="btn">PLAY AGAIN</button>
 </div>
 
 
