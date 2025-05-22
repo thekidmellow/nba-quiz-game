@@ -23,3 +23,18 @@
     --border-radius: 10px;
     --container-width: 1200px;
 }
+
+/* ----RESPONSIVE TYPOGRAPHY---- */
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+    html { font-size: 12px; }
+}
+
