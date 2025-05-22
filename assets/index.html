@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +12,49 @@
     <link rel="manifest" href="/assets/images/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
-    
+
     <!-- START SCREEN -->
-    
+
 <div class="container">
         <div class="game-screen" id="start-screen">
             <h1>NBA QUIZ GAME</h1>
             <div class="input-container">
                 <input type="text" id="player-name" placeholder="ENTER NAME" maxlength="20">
                 <button id="start-button" class="btn">START GAME</button>
+            </div>
+        </div>
+
+    <!-- Quiz screen -->
+
+    <div class="game-screen hidden" id="quiz-screen">
+        <h1>NBA QUIZ GAME</h1>
+        <div class="score-display">Score : <span id="current-score">0</span>
+        </div>
+
+        <div class="question-container">
+            <h2 id="question-text">Which team has won the most NBA championships?</h2>
+
+            <div class="options-grid">
+                <div class="option" data-team="Boston Celtics">
+                <img src="/assets/images/Boston.jpg" alt="Boston Celtics" loading="lazy">
+                <span class="team-name">Boston Celtics</span>
+            </div>
+
+            <div class="option" data-team="Chicago Bulls">
+            <img src="/assets/images/Bulls.jpg" alt="Chicago Bulls" loading="lazy">
+            <span class="team-name">Chicago Bulls</span>
+            </div>
+
+            <div class="option" data-team="Los Angeles Lakers">
+            <img src="/assets/images/L.A.jpg" alt="Los Angeles Lakers" loading="lazy">
+            <span class="team-name">Los Angeles Lakers</span>
+            </div>
+
+            <div class="option" data-team="Golden State Warriors">
+            <img src="../assets/images/Warriors.jpg" alt="Golden State Warriors" loading="lazy">
+            <span class="team-name">Golden State Warriors</span></div>
         </div>
     </div>
 </div>
@@ -42,5 +76,11 @@
 
 
 
+
+
+
+
+
 </body>
+
 </html>
