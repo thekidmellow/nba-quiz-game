@@ -1,4 +1,4 @@
-// Object to preload and store all images
+// OBJECT TO PRELOAD AND STORE ALL IMAGES
 
 const gameImages = {
     teams: {
@@ -22,7 +22,7 @@ const gameImages = {
     }
 };
 
-// Global game variables
+// GLOBAL GAME VARIABLES
 
 let currentQuestion = 0;
 let score = 0;
@@ -41,7 +41,7 @@ const finalUsername = document.getElementById('final-username');
 const victoryScore = document.getElementById('victory-score');
 const victoryUsername = document.getElementById('victory-username');
 
-// Image preloader function
+// IMAGE PRELOADER FUNCTION
 
 function preloadImages() {
     const imagePromises = [];
@@ -60,3 +60,60 @@ function preloadImages() {
     return Promise.all(imagePromises);
 }
 
+// QUESTIONS
+
+const questions = [
+{    
+    question: "Which team has won the most NBA championships?",
+    options: [
+        { text: "Boston Celtics", image: gameImages.teams.celtics },
+        { text: "Chicago Bulls", image: gameImages.teams.bulls },
+        { text: "Los Angeles Lakers", image: gameImages.teams.lakers },
+        { text: "Golden State Warriors", image: gameImages.teams.warriors }
+    ],
+    correctAnswer: "Boston Celtics"
+},
+{    
+    question: "Who is the NBA's all-time leading scorer?",
+    options: [
+        { text: "LeBron James", image: gameImages.players.lebron },
+        { text: "Kareem Abdul-Jabbar", image: gameImages.players.kareem },
+        { text: "Karl Malone", image: gameImages.players.malone },
+        { text: "Kobe Bryant", image: gameImages.players.kobe }
+    ],
+    correctAnswer: "LeBron James"
+},
+{    
+    question: "Which player has won the most MVP awards?",
+    options: [
+        { text: "Michael Jordan", image: gameImages.players.jordan },
+        { text: "Bill Russell", image: gameImages.players.russell },
+        { text: "Kareem Abdul-Jabbar", image: gameImages.players.kareem },
+        { text: "LeBron James", image: gameImages.players.lebron }
+    ],
+    correctAnswer: "Kareem Abdul-Jabbar"
+},
+];
+
+function handleImageError(event) {
+    const img = event.target;
+    img.src = 'assets/placeholder.jpg';
+}
+
+function loadQuestion() {
+    const question = question[currentQuestion];
+    questionText.textContent = question.question;
+
+    options.forEach((option, index) => {
+        const img = option.querySelector('img');
+        const name = option.querySelector('.team-name');
+
+        img.onerror = handleImageError;
+        img.src = question.options[index].image;
+        name.textContent = question.options[index].text;
+        option.dataset.team = question.options[index].text;
+
+        option.classList.remove('correct', 'incorrect');
+        option.style.pointerEvents = 'auto';
+    });
+}
