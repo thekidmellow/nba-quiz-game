@@ -241,3 +241,12 @@ input[type="text"] {
     color: #ff0000;
     text-rendering: 0 0 10px rgba(255, 0, 0, 0.8);
 }
+
+/* ----ACCESSIBILITY---- */
+
+input[type="text"]:focus,
+.btn:focus,
+.option:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
