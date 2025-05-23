@@ -169,4 +169,8 @@ function initGame() {
     quizScreen.classList.remove('hidden');
 }
 
+// GAME INITIALIZATION AFTER DOM IS READY
 
+window.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('start-button');
+    const playAgainButtons = document.querySelectorAll('#play-again, #play-again-victory');
