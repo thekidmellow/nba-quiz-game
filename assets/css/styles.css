@@ -50,7 +50,18 @@ body {
     padding: var(--spacing-sm);
 }
 .hidden {
-    display: nonne;
+    display: none;
+}
+
+/* ---TYPOGRAPHY---- */
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: clamp(var(--spacing-md), 4vw, var(--spacing-xl));
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
 }
 
 
