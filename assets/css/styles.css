@@ -180,5 +180,38 @@ input[type="text"] {
     text-align: center;
 }
 
+/* ----FEEDBACK INDICATORS---- */
 
+.option.correct,
+.option.incorrect {
+    pointer-events: none;
+}
+
+.option.correct {
+    border: 3px solid var(--color-correct);
+}
+
+.option.incorrect {
+    border: 3px solid var(--color-incorrect);
+}
+
+.option.correct::after,
+.option.incorrect::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5,);
+}
+
+.option.correct::after {
+    content: "✓";
+    color: var(--color-correct);
+}
+
+.option.incorrect::after {
+    content: "✗";
+    color: var(--color-incorrect);
+}
 
