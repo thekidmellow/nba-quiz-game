@@ -41,3 +41,22 @@ const finalUsername = document.getElementById('final-username');
 const victoryScore = document.getElementById('victory-score');
 const victoryUsername = document.getElementById('victory-username');
 
+// Image preloader function
+
+function preloadImages() {
+    const imagePromises = [];
+    const allImages = {...gameImages.teams, ...gameImages.players, ...gameImages.ui };
+
+    for (const src of Object.values(allImages)) {
+        const img = new Image();
+        const promise = new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+        });
+        img.src = src;
+        imagePromises.push(promise);
+    }
+
+    return Promise.all(imagePromises);
+}
+
