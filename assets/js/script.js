@@ -179,4 +179,36 @@ window.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.textContent = `.loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; z-index: 1000; }`;
     document.head.appendChild(style);
-        
+
+// Loading screen element
+    const loadingScreen = document.createElement('div');
+    loadingScreen.className = 'loading-screen';
+    loadingScreen.textContent = 'Loading...';
+    document.body.appendChild(loadingScreen);
+
+    preloadImages()
+        .then(() => {
+            loadingScreen.remove();
+
+            startButton.addEventListener('click', () => {
+                const input = document.getElementById('player-name');
+                playerName = input.value.trim() || 'Player';
+                initGame();
+            });
+            
+            options.forEach(option => {
+                option.addEventListener('click', () => checkAnswer(option));
+            });
+            
+            playAgainButtons.forEach(btn => btn.addEventListener('click', () => {
+                endScreen.classList.add('hidden');
+                victoryScreen.classList.add('hidden');
+                startScreen.classList.remove('hidden');
+            }));
+        })
+        .catch(err => {
+            console.error('Image preloading failed:', err);
+            loadingScreen.textContent = 'Failed to load images. Please refresh.';
+        });
+});                    
+
