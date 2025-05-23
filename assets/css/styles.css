@@ -38,3 +38,20 @@ html {
     html { font-size: 12px; }
 }
 
+/* ----LAYOUT & BACKGROUND---- */
+
+body {
+    color: #fff;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    background: #000 url(../images/BG.jpg) no-repeat center/cover;
+    padding: var(--spacing-sm);
+}
+.hidden {
+    display: nonne;
+}
+
+
+
