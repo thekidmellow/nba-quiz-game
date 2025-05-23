@@ -174,3 +174,9 @@ function initGame() {
 window.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
     const playAgainButtons = document.querySelectorAll('#play-again, #play-again-victory');
+
+// Add style tag for loading screen
+    const style = document.createElement('style');
+    style.textContent = `.loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; z-index: 1000; }`;
+    document.head.appendChild(style);
+        
