@@ -215,3 +215,29 @@ input[type="text"] {
     color: var(--color-incorrect);
 }
 
+/* ----RESULT SCREENS---- */
+
+.result-image {
+    width: min(200px, 80%);
+    height: auto;
+    margin: var(--spacing-lg) auto;
+    border-radius: var(--border-radius);
+    display: block;
+}
+
+.final-score {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    margin: var(--spacing-lg) 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+#victory-screen h1 {
+    color: #00FF00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+#end-screen h1 {
+    color: #ff0000;
+    text-rendering: 0 0 10px rgba(255, 0, 0, 0.8);
+}
