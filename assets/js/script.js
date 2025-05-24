@@ -122,8 +122,10 @@ function checkAnswer(selectedOption) {
         selectedOption.classList.add('correct');
         score += 10;
         currentScore.textContent = score;
+        sounds.correct.play();
     } else {
         selectedOption.classList.add('incorrect');
+        sounds.wrong.play();
         options.forEach(opt => {
             if (opt.dataset.team === question.correctAnswer) {
                 opt.classList.add('correct');
@@ -149,10 +151,12 @@ function endGame() {
         victoryScreen.classList.remove('hidden');
         victoryScore.textContent = score;
         victoryUsername.textContent = playerName;
+        sounds.victory.play();
     } else {
         endScreen.classList.remove('hidden');
         finalScore.textContent = score;
         finalUsername.textContent = playerName;
+        sounds.gameover.play();
     }
 }
 
@@ -186,6 +190,7 @@ window.addEventListener('DOMContentLoaded', () => {
             loadingScreen.remove();
 
             startButton.addEventListener('click', () => {
+                sounds.click.play();
                 const input = document.getElementById('player-name');
                 playerName = input.value.trim() || 'Player';
                 initGame();
