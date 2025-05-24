@@ -46,7 +46,7 @@ body {
     min-height: 100dvh;
     display: flex;
     justify-content: center;
-    background: #000 url(assets/images/BG.jpg) no-repeat center/cover;
+    background: #000 url(/assets/images/BG.jpg) no-repeat center/cover;
     padding: var(--spacing-sm);
 }
 .hidden {
