@@ -43,12 +43,35 @@ html {
 body {
     color: #fff;
     min-height: 100vh;
-    min-height: 100dvh;
     display: flex;
     justify-content: center;
-    background: #000 url(../images/BG.jpg) no-repeat center/cover;
+    background: #000 url(../images/BG.jpg) no-repeat top center;
+    background-size: cover;
     padding: var(--spacing-sm);
 }
+
+@media (max-width: 768px) {
+    body {
+        background-position: top left;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-position: top left;
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
 .hidden {
     display: none;
 }
