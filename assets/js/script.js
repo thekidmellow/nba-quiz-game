@@ -170,7 +170,30 @@ function checkAnswer(selectedOption) {
     }, 1500);
 }
 
+function autoFail () {
+    const question = questions[currentQuestion];
+    options.forEach(opt => {
+        if (opt.dataset.team === question.correctAnswer) {
+            opt.classList.add('correct');
+        } else {
+            opt.classList.add('incorrect');
+        }
+        opt.style.pointerEvents = 'none';
+    });
+    sounds.wrong.play();
+
+    setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion >= questions.lenght) {
+            endGame();
+         } else {
+            loadQuestion();
+        }
+    }, 1500);
+}
+
 function endGame() {
+    clearInterval(timer);
     quizScreen.classList.add('hidden');
     if (score === questions.length * 10) {
         victoryScreen.classList.remove('hidden');
