@@ -26,6 +26,12 @@ let currentQuestion = 0;
 let score = 0;
 let playerName = '';
 
+// Timer variables
+let timer;
+let timerLeft = 10;
+
+const timerDisplay = document.getElementById('timer');
+
 const questionText = document.getElementById('question-text');
 const options = document.querySelectorAll('.option');
 const quizScreen = document.getElementById('quiz-screen');
