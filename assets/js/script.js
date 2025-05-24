@@ -118,6 +118,25 @@ function loadQuestion() {
         option.classList.remove('correct', 'incorrect');
         option.style.pointerEvents = 'auto';
     });
+
+    // Start/reset timer
+    clearInterval(timer);
+    timeLeft = 10;
+    timerDisplay.textContent = timeLeft;
+
+    timer = setInterval(timer);
+    timeLeft = 10;
+    timerDisplay.textContent = timeLeft;
+
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent =timeLeft;
+
+        if (timeLeft <= 0)  {
+            clearInterval(timer);
+            autoFail();
+        }
+    }, 10000);        
 }
 
 function checkAnswer(selectedOption) {
