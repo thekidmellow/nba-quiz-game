@@ -1,12 +1,11 @@
 // OBJECT TO PRELOAD AND STORE ALL IMAGES
-
 const gameImages = {
     teams: {
         celtics: '/assets/images/Boston.jpg',
         bulls: '/assets/images/Bulls.jpg',
         lakers: '/assets/images/L.A.jpg',
         warriors: '/assets/images/Warriors.jpg',
-}
+    },
     players: {
         lebron: '/assets/images/LeBron.jpg',
         kareem: '/assets/images/Kareem_Abdul-Jabbar.jpg',
@@ -14,7 +13,7 @@ const gameImages = {
         kobe: '/assets/images/Kobe.jpg',
         jordan: '/assets/images/Michael-Jordan.jpg',
         russell: '/assets/images/Bill_russell.jpg',
-    }
+    },
     ui: {
         victory: '/assets/images/correct_meme.png',
         gameOver: '/assets/images/crying_face.png',
@@ -23,7 +22,6 @@ const gameImages = {
 };
 
 // GLOBAL GAME VARIABLES
-
 let currentQuestion = 0;
 let score = 0;
 let playerName = '';
@@ -33,16 +31,15 @@ const options = document.querySelectorAll('.option');
 const quizScreen = document.getElementById('quiz-screen');
 const startScreen = document.getElementById('start-screen');
 const endScreen = document.getElementById('end-screen');
-const VictoryScreen = document.getElementById('victory-screen');
+const victoryScreen = document.getElementById('victory-screen');
 
 const currentScore = document.getElementById('current-score');
-const finalScore = document.querySelectorAll('final-score');
+const finalScore = document.getElementById('final-score');
 const finalUsername = document.getElementById('final-username');
 const victoryScore = document.getElementById('victory-score');
 const victoryUsername = document.getElementById('victory-username');
 
 // IMAGE PRELOADER FUNCTION
-
 function preloadImages() {
     const imagePromises = [];
     const allImages = {...gameImages.teams, ...gameImages.players, ...gameImages.ui };
@@ -61,7 +58,6 @@ function preloadImages() {
 }
 
 // QUESTIONS
-
 const questions = [
     {    
         question: "Which team has won the most NBA championships?",
@@ -92,16 +88,16 @@ const questions = [
             { text: "LeBron James", image: gameImages.players.lebron }
         ],
         correctAnswer: "Kareem Abdul-Jabbar"
-    },
-    ];
+    }
+];
 
 function handleImageError(event) {
     const img = event.target;
-    img.src = 'assets/placeholder.jpg';
+    img.src = '/assets/placeholder.jpg';
 }
 
 function loadQuestion() {
-    const question = question[currentQuestion];
+    const question = questions[currentQuestion];
     questionText.textContent = question.question;
 
     options.forEach((option, index) => {
@@ -119,7 +115,7 @@ function loadQuestion() {
 }
 
 function checkAnswer(selectedOption) {
-    const question = question[currentQuestion];
+    const question = questions[currentQuestion];
     const isCorrect = selectedOption.dataset.team === question.correctAnswer;
 
     if (isCorrect) {
@@ -127,7 +123,7 @@ function checkAnswer(selectedOption) {
         score += 10;
         currentScore.textContent = score;
     } else {
-        selectedOption,classList.add('incorrect');
+        selectedOption.classList.add('incorrect');
         options.forEach(opt => {
             if (opt.dataset.team === question.correctAnswer) {
                 opt.classList.add('correct');
@@ -139,7 +135,7 @@ function checkAnswer(selectedOption) {
 
     setTimeout(() => {
         currentQuestion++;
-        if (currentQuestion >= questions.lenght) {
+        if (currentQuestion >= questions.length) {
             endGame();
         } else {
             loadQuestion();
@@ -148,13 +144,13 @@ function checkAnswer(selectedOption) {
 }
 
 function endGame() {
-    quizScreen.classList.add('hidden')
-    if (score === questions.lenght * 10) {
+    quizScreen.classList.add('hidden');
+    if (score === questions.length * 10) {
         victoryScreen.classList.remove('hidden');
         victoryScore.textContent = score;
         victoryUsername.textContent = playerName;
     } else {
-        endScreen.classList,remove('hidden');
+        endScreen.classList.remove('hidden');
         finalScore.textContent = score;
         finalUsername.textContent = playerName;
     }
@@ -170,17 +166,16 @@ function initGame() {
 }
 
 // GAME INITIALIZATION AFTER DOM IS READY
-
 window.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
     const playAgainButtons = document.querySelectorAll('#play-again, #play-again-victory');
 
-// Add style tag for loading screen
+    // Add style tag for loading screen
     const style = document.createElement('style');
     style.textContent = `.loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; z-index: 1000; }`;
     document.head.appendChild(style);
 
-// Loading screen element
+    // Loading screen element
     const loadingScreen = document.createElement('div');
     loadingScreen.className = 'loading-screen';
     loadingScreen.textContent = 'Loading...';
@@ -210,5 +205,13 @@ window.addEventListener('DOMContentLoaded', () => {
             console.error('Image preloading failed:', err);
             loadingScreen.textContent = 'Failed to load images. Please refresh.';
         });
-});                    
+});
 
+// SOUND EFFECTS
+const sounds = {
+    correct: new Audio('/assets/audio/swish-correct.mp3'),
+    wrong: new Audio('/assets/audio/wrong-answer.mp3'),
+    click: new Audio('/assets/audio/click.mp3'),
+    gameover: new Audio('/assets/audio/game-over.mp3'),
+    victory: new Audio('/assets/audio/victory.mp3'),
+};    
