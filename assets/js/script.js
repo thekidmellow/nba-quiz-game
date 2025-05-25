@@ -143,24 +143,6 @@ function checkAnswer(selectedOption) {
     const question = questions[currentQuestion];
     const isCorrect = selectedOption.dataset.team === question.correctAnswer;
 
-// Feedback popup
-    const feedback = document.createElement('div');
-    feedback.textContent = isCorrect ? "Nice shot!" : "Airball!";
-    feedback.style.position = 'absolute';
-    feedback.style.top = '60%';
-    feedback.style.left = '50%';
-    feedback.style.transform = 'translate(-50%, -50%)';
-    feedback.style.fontSize = '24px';
-    feedback.style.fontWeight = 'bold';
-    feedback.style.zIndex = '999';
-    feedback.style.backgroundColor = 'rgba(0,0,0,0.8)';
-    feedback.style.color = '#fff';
-    feedback.style.padding = '10px 20px';
-    feedback.style.borderRadius = '12px';
-    document.body.appendChild(feedback);
-
-    setTimeout(() => feedback.remove(), 1500);
-    
     if (isCorrect) {
         selectedOption.classList.add('correct');
         score += 10;
