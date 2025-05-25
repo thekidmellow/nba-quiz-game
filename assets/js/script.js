@@ -139,7 +139,7 @@ function loadQuestion() {
 
     timer = setInterval(() => {
         timerLeft--;
-        timerDisplay.textContent =timerLeft;
+        timerDisplay.textContent = timerLeft;
 
         if (timerLeft <= 0)  {
             clearInterval(timer);
