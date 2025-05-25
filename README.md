@@ -65,7 +65,7 @@ NBA QUIZ GAME is a web-based interactive quiz designed to entertain users and te
 
 - Sound effects for feedback
 
-- Resposive design for various devices
+- Responsive design for various devices
 
 ---
 
@@ -85,7 +85,7 @@ NBA QUIZ GAME is a web-based interactive quiz designed to entertain users and te
 
 - **Victory Screen** for perfect scores
 
-- Resposive and accessible UI with keyboard focus styles
+- Responsive and accessible UI with keyboard focus styles
 
 - Image preloading with a loading screen
 
@@ -101,7 +101,7 @@ NBA QUIZ GAME is a web-based interactive quiz designed to entertain users and te
 
 3. Click **Start Game**
 
-4. Answer the multiple-choice NBA qustions before the timer runs out.
+4. Answer the multiple-choice NBA questions before the timer runs out.
 
 5. View your score either the Game Over or Victory screen.
 
@@ -180,15 +180,15 @@ nba-quiz-game/
 
 Color | Hex Code | Usage
 --- | --- | ---
-🟥Red | #ff0000 | Buttons & Gameover Heading
-🍋‍🟩Lime | #00ff00 | Victory Heading
-⬜️White | #FFFFFF | Paragraphs
+🟥 Red | #ff0000 | Buttons & Gameover Heading
+🟩 Lime | #00ff00 | Victory Heading
+⬜️ White | #FFFFFF | Paragraphs
 
 ## 🔈 Media
 
-* Photos [https://google.com]
+* Photos from [Google Images](https://google.com)
 
-* Audio [https://tuna.voicemod.net/]
+* Audio from [Voicemod Tuna](https://tuna.voicemod.net/)
 
 ----
 
