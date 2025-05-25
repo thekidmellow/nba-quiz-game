@@ -159,7 +159,7 @@ input[type="text"] {
     gap: clamp(var(--spacing-sm), 2vw, var(--spacing-lg));
     max-width: 800px;
     margin: 0 auto;
-    padding: o var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
 }
 
 .option {
@@ -218,7 +218,7 @@ input[type="text"] {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: clamp(2rem, 8vw, 4rem);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5,);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .option.correct::after {

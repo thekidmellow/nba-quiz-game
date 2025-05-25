@@ -136,7 +136,7 @@ function loadQuestion() {
             clearInterval(timer);
             autoFail();
         }
-    }, 10000);        
+    }, 1000);        
 }
 
 function checkAnswer(selectedOption) {
