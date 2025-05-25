@@ -37,19 +37,19 @@ An engaging online quiz game to test your NBA knowledge! Challenge yourself with
 
 ![Mockup](assets/images/nba-quiz-game-mockup.jpg)
 
-![First screen](../nba-quiz-game/assets/images/first-screen.png)
+![First screen](assets/images/first-screen.png)
 
-![Desktop view](../nba-quiz-game/assets/images/desktop-view.png)
+![Desktop view](assets/images/desktop-view.png)
 
-![Victory view](../nba-quiz-game/assets/images/victory-screen.png)
+![Victory view](assets/images/victory-screen.png)
 
-![Gameover view](../nba-quiz-game/assets/images/game-over-screen.png)
+![Gameover view](assets/images/game-over-screen.png)
 
 ---
 
 ## 🖾 Wireframe
 
-![Wireframe](../nba-quiz-game/assets/images/nba-quiz-game-wireframe-png.png)
+![Wireframe](assets/images/nba-quiz-game-wireframe-png.png)
 
 ---
 
