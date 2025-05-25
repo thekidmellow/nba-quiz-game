@@ -184,7 +184,7 @@ function autoFail () {
 
     setTimeout(() => {
         currentQuestion++;
-        if (currentQuestion >= questions.lenght) {
+        if (currentQuestion >= questions.length) {
             endGame();
          } else {
             loadQuestion();
