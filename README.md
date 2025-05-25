@@ -156,6 +156,23 @@ nba-quiz-game/
 
 ---
 
+
+## 🦾 Validation
+
+#### HTML [Tested and passed with no errors](https://validator.w3.org/nu/#textarea)
+
+#### CSS [Tested and passed with no errors](https://jigsaw.w3.org/css-validator/validator)
+
+#### JavaScript tested and passed with no errors
+
+#### Lighthouse check
+
+![screenshot](assets/images/html-css-java-validation.png)
+
+![Screenshot](assets/images/lighthouse-check.png)
+
+---
+
 ## 🛠️ Technologies Used
 
 * HTML5 - Semantic markup
@@ -191,16 +208,6 @@ Color | Hex Code | Usage
 * Audio from [Voicemod Tuna](https://tuna.voicemod.net/)
 
 ----
-
-## 🦾 Validation
-
-#### HTML [Tested and passed with no errors](https://validator.w3.org/nu/#textarea)
-
-#### CSS [Tested and passed with no errors](https://jigsaw.w3.org/css-validator/validator)
-
-![screenshot](assets/images/html-css-validation.png)
-
----
 
 ## 🎛️ Deployment
 
