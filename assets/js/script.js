@@ -45,6 +45,15 @@ const finalUsername = document.getElementById('final-username');
 const victoryScore = document.getElementById('victory-score');
 const victoryUsername = document.getElementById('victory-username');
 
+// SOUND EFFECTS
+const sounds = {
+    correct: new Audio('assets/audio/swish-correct.mp3'),
+    wrong: new Audio('assets/audio/wrong-answer.mp3'),
+    click: new Audio('assets/audio/click.mp3'),
+    gameover: new Audio('assets/audio/game-over.mp3'),
+    victory: new Audio('assets/audio/victory.mp3'),
+};    
+
 // IMAGE PRELOADER FUNCTION
 function preloadImages() {
     const imagePromises = [];
@@ -224,7 +233,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Add style tag for loading screen
     const style = document.createElement('style');
-    style.textContent = `.loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; z-index: 1000; }`;
+    style.textContent = `.loading-screen {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.9); 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        color: white; 
+        font-size: 24px; 
+        z-index: 1000;
+    }`;
+    
     document.head.appendChild(style);
 
     // Loading screen element
@@ -259,12 +282,3 @@ window.addEventListener('DOMContentLoaded', () => {
             loadingScreen.textContent = 'Failed to load images. Please refresh.';
         });
 });
-
-// SOUND EFFECTS
-const sounds = {
-    correct: new Audio('assets/audio/swish-correct.mp3'),
-    wrong: new Audio('assets/audio/wrong-answer.mp3'),
-    click: new Audio('assets/audio/click.mp3'),
-    gameover: new Audio('assets/audio/game-over.mp3'),
-    victory: new Audio('assets/audio/victory.mp3'),
-};    
