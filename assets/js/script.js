@@ -121,18 +121,18 @@ function loadQuestion() {
 
     // Start/reset timer
     clearInterval(timer);
-    timeLeft = 10;
-    timerDisplay.textContent = timeLeft;
+    timerLeft = 10;
+    timerDisplay.textContent = timerLeft;
 
     timer = setInterval(timer);
-    timeLeft = 10;
-    timerDisplay.textContent = timeLeft;
+    timerLeft = 10;
+    timerDisplay.textContent = timerLeft;
 
     timer = setInterval(() => {
-        timeLeft--;
-        timerDisplay.textContent =timeLeft;
+        timerLeft--;
+        timerDisplay.textContent =timerLeft;
 
-        if (timeLeft <= 0)  {
+        if (timerLeft <= 0)  {
             clearInterval(timer);
             autoFail();
         }
